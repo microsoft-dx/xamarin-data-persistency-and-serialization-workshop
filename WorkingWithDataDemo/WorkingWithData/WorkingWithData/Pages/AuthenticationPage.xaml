@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkingWithData.Pages.AuthenticationPage">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Frame CornerRadius="20" BackgroundColor="WhiteSmoke" BorderColor="Black">
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="5">
+                    <Entry Placeholder="Enter Your UserName" WidthRequest="350"/>
+                    <Entry Placeholder="Enter your Password" IsPassword="True" WidthRequest="350"/>
+                    <Frame HeightRequest="50"/>
+                    <Button Text="Authenticate" Clicked="AuthenticateMethod"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
