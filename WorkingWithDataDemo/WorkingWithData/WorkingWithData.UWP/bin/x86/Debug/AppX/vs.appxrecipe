@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\alexandrupetrescu\source\repos\xamarin-data-persistency-and-serialization-workshop\WorkingWithDataDemo\WorkingWithData\WorkingWithData.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-12-04T18:52:35.719</Modified>
+      <Modified>2018-12-05T18:57:38.576</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\alexandrupetrescu\source\repos\xamarin-data-persistency-and-serialization-workshop\WorkingWithDataDemo\WorkingWithData\WorkingWithData.UWP\bin\x86\Debug\MobileDemo.exe">
       <PackagePath>entrypoint\MobileDemo.exe</PackagePath>
-      <Modified>2018-12-04T18:52:34.690</Modified>
+      <Modified>2018-12-05T18:57:37.812</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexandrupetrescu\.nuget\packages\newtonsoft.json\12.0.1\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -748,11 +748,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexandrupetrescu\source\repos\xamarin-data-persistency-and-serialization-workshop\WorkingWithDataDemo\WorkingWithData\WorkingWithData\bin\Debug\netstandard2.0\WorkingWithData.dll">
       <PackagePath>WorkingWithData.dll</PackagePath>
-      <Modified>2018-12-04T18:52:28.886</Modified>
+      <Modified>2018-12-05T18:57:32.660</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexandrupetrescu\source\repos\xamarin-data-persistency-and-serialization-workshop\WorkingWithDataDemo\WorkingWithData\WorkingWithData\bin\Debug\netstandard2.0\DataAccessLayer.dll">
       <PackagePath>DataAccessLayer.dll</PackagePath>
-      <Modified>2018-12-04T18:52:27.607</Modified>
+      <Modified>2018-12-05T18:56:21.744</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexandrupetrescu\source\repos\xamarin-data-persistency-and-serialization-workshop\WorkingWithDataDemo\WorkingWithData\WorkingWithData.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
@@ -899,11 +899,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexandrupetrescu\source\repos\xamarin-data-persistency-and-serialization-workshop\WorkingWithDataDemo\WorkingWithData\WorkingWithData.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-12-04T18:52:34.516</Modified>
+      <Modified>2018-12-05T18:57:37.640</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexandrupetrescu\source\repos\xamarin-data-persistency-and-serialization-workshop\WorkingWithDataDemo\WorkingWithData\WorkingWithData.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-12-04T18:52:34.517</Modified>
+      <Modified>2018-12-05T18:57:37.641</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -915,11 +915,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexandrupetrescu\source\repos\xamarin-data-persistency-and-serialization-workshop\WorkingWithDataDemo\WorkingWithData\WorkingWithData.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2018-12-04T18:38:31.725</Modified>
+      <Modified>2018-12-05T10:28:39.234</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexandrupetrescu\source\repos\xamarin-data-persistency-and-serialization-workshop\WorkingWithDataDemo\WorkingWithData\WorkingWithData.UWP\bin\x86\Debug\Core\MobileDemo.exe">
       <PackagePath>MobileDemo.exe</PackagePath>
-      <Modified>2018-12-04T18:52:35.713</Modified>
+      <Modified>2018-12-05T18:57:38.571</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

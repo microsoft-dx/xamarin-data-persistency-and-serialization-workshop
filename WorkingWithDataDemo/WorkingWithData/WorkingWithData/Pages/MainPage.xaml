@@ -2,8 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WorkingWithData.Pages.MainPage"
-             BackgroundColor="WhiteSmoke"
-             Title="This is my shopping list app!">
+             BackgroundColor="WhiteSmoke">
     <!--This layout contains content elements, like lists and text views-->
     <StackLayout x:Name="MainStack">
         <!--This is a layout which will contain action elements like buttons-->
@@ -11,8 +10,9 @@
             x:Name="actions"
             Orientation="Horizontal"
             HorizontalOptions="Center">
+            <Frame HeightRequest="50"></Frame>
+            <Label Text="My Shopping List"></Label>
             <Button x:Name="AddNewItemButton" Text="Add New Item" Clicked="AddNewItem"/>
-            <Button x:Name="RemoveItemButton" Text="Remove Last Item" Clicked="RemoveLastItem" />
         </StackLayout>
 
         <ScrollView>

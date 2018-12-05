@@ -32,5 +32,19 @@ namespace WorkingWithData.Utilities
             }
         }
 
+
+        public static bool FirstRunEver
+        {
+            get
+            {
+                return AppSettings.GetValueOrDefault("FIRST_RUN_EVER", "TRUE").Equals("TRUE");
+            }
+            set
+            {
+                AppSettings.AddOrUpdateValue("FIRST_RUN_EVER", value ? "TRUE" : "FALSE");
+            }
+        }
+
+        // We may need to add more things here
     }
 }

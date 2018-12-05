@@ -2,26 +2,27 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
-using DataAccessLayer.Entities;
+using DataTransferObjects.Entities;
+using DataTransferObjects.Users;
 using SQLite;
 
 namespace DataAccessLayer
 {
     public partial class Database
     {
-        private static Database database;
+        private static Database _dataBase;
         private static SQLiteAsyncConnection _connection;
 
         public static Database Instance
         {
             get
             {
-                if (database == null)
+                if (_dataBase == null)
                 {
-                    database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ShoppingItem.db3"));
+                    _dataBase = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), $"ShoppingItem_{Core.AuthenticatedUserID}.db3"));
                 }
 
-                return database;
+                return _dataBase;
             }
         }
 
@@ -32,19 +33,26 @@ namespace DataAccessLayer
             _connection.CreateTableAsync<ShoppingItem>().Wait();
             _connection.CreateTableAsync<User>().Wait();
         }
+
+        public void LogOut()
+        {
+            _connection.CloseAsync().Wait();
+            _dataBase = null;
+        }
+
         public Task<List<ShoppingItem>> GetItemsAsync()
         {
-            return _connection.Table<ShoppingItem>().OrderBy(x => x.ItemId).ToListAsync();
+            return _connection.Table<ShoppingItem>().OrderBy(x => x.ItemID).ToListAsync();
         }
 
-        public Task<ShoppingItem> GetItemAsync(int id)
+        public Task<ShoppingItem> GetItemAsync(uint id)
         {
-            return _connection.Table<ShoppingItem>().Where(i => i.ItemId == id).FirstOrDefaultAsync();
+            return _connection.Table<ShoppingItem>().Where(i => i.ItemID == id).FirstOrDefaultAsync();
         }
 
-        public Task<int> InsertItemAsync(ShoppingItem item)
+        public Task<int> UpdateItemData(ShoppingItem item)
         {
-            return _connection.InsertAsync(item);
+            return _connection.InsertOrReplaceAsync(item);
         }
 
         public Task<int> DeleteItemAsync(ShoppingItem item)
@@ -64,9 +72,11 @@ namespace DataAccessLayer
                 x.UserName == userName);
         }
 
-        public Task<int> AddAuthenticatedUser(User givenUser)
+        public async Task AddAuthenticatedUser(User givenUser)
         {
-            return _connection.InsertAsync(givenUser);
+            await _connection.InsertOrReplaceAsync(givenUser);
+
+            return;
         }
     }
 }

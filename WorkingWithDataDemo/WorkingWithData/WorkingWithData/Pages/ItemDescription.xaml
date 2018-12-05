@@ -7,6 +7,9 @@
                      VerticalOptions="Center"
                      HorizontalOptions="Center">
             <Button Clicked="GoBack" Text="&lt;="/>
+            <Entry></Entry>
+            <Entry></Entry>
+            <Stepper></Stepper>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
