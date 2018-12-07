@@ -28,7 +28,7 @@ namespace DataAccessLayer
 
         private Database(string dbPath)
         {
-            _connection = new SQLiteAsyncConnection(dbPath);
+            _connection = new SQLiteAsyncConnection(dbPath); // open database file or create database file if it doesn't exist
 
             _connection.CreateTableAsync<ShoppingItem>().Wait();
             _connection.CreateTableAsync<User>().Wait();
@@ -36,6 +36,7 @@ namespace DataAccessLayer
 
         public void LogOut()
         {
+            // close database connection and invalidate database object
             _connection.CloseAsync().Wait();
             _dataBase = null;
         }

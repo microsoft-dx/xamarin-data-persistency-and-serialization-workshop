@@ -17,6 +17,7 @@ namespace DataTransferObjects.Users
 
         public User(string serializedUser)
         {
+            // deserialize json string containing user data
             User deserializedUser = JsonConvert.DeserializeObject<User>(serializedUser);
 
             this.UserID = deserializedUser.UserID;
@@ -31,12 +32,14 @@ namespace DataTransferObjects.Users
         public static string HashPassword(string plainTextPassword)
         {
             var crypt = new System.Security.Cryptography.SHA256Managed();
-            var hash = new StringBuilder();
-            byte[] crypto = crypt.ComputeHash(Encoding.UTF8.GetBytes(plainTextPassword));
+            var hash = new StringBuilder(64); // sha256 hash length in hexadecimal is 64 characters (256 bits / 4 bits per character = 64 characters)
+                                              // create StringBuilder with preallocated size of 64
+            byte[] crypto = crypt.ComputeHash(Encoding.UTF8.GetBytes(plainTextPassword)); // compute hash of password as array of bytes
 
+            // construct hash string from array of bytes
             foreach (byte theByte in crypto)
             {
-                hash.Append(theByte.ToString("x2"));
+                hash.Append(theByte.ToString("x2")); // append hexadecimal representation of byte to hash
             }
 
             return hash.ToString();

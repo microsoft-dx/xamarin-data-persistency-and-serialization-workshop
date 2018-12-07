@@ -11,13 +11,13 @@ namespace WorkingWithData.Utilities
             return new KeyValuePair<string, User>("MethodNotImplemented", null);
         }
 
-        public static KeyValuePair<string, User> AuthenTicateUseLocally(string userName, string passWord)
+        public static KeyValuePair<string, User> AuthenTicateUserLocally(string userName, string passWord)
         {
             // TO DO: Create The Method that Authenticates a user Locally
             return new KeyValuePair<string, User>("MethodNotImplemented", null);
         }
 
-        public static KeyValuePair<string, User> AuthenTicateUse(string userName, string passWord)
+        public static KeyValuePair<string, User> AuthenTicateUser(string userName, string passWord)
         {
             // TO DO: Create a method that combines both
             return new KeyValuePair<string, User>("MethodNotImplemented", null);

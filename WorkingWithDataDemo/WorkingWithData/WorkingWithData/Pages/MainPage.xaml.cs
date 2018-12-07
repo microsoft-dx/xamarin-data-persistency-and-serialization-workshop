@@ -8,6 +8,7 @@ namespace WorkingWithData.Pages
 {
     public partial class MainPage : ContentPage
     {
+        // observable collection is used in order to notify UI on any change (insertion, deletion)
         public ObservableCollection<ShoppingItem> ShoppingItems { get; set; }
         private uint itemCount;
 
@@ -18,7 +19,7 @@ namespace WorkingWithData.Pages
             InitializeComponent();
 
             InitializeItems();
-            ContentListView.ItemsSource = ShoppingItems;
+            ContentListView.ItemsSource = ShoppingItems; // set source of data for list view to our item collection
         }
 
         private void InitializeItems()
@@ -26,6 +27,10 @@ namespace WorkingWithData.Pages
             //Get the Items From the Database
             this.ShoppingItems = new ObservableCollection<ShoppingItem>(Database.Instance.GetItemsAsync().Result);
             itemCount = ShoppingItems.Count > 0 ? ShoppingItems.Max(x => x.ItemID) + 1 : 0;
+                     // ShoppingItems.Any() ? ShoppingItems.Max(x => x.ItemID) + 1 : 0;
+                     // ShoppingItems.Select(x => x.ItemID).DefaultIfEmpty(0U).Max(x => x) + 1;
+                     // ShoppingItems.Max(x => (uint?)x.ItemID) + 1 ?? 0;
+                     // ShoppingItems.Aggregate(0U, (m, x) => System.Math.Max(m, x.ItemID)) + 1;
         }
 
         private void AddNewItem(object sender, System.EventArgs e)

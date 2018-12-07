@@ -13,10 +13,12 @@ namespace WorkingWithData.Pages
         {
             InitializeComponent();
 
+            // if this is the first time the user runs the application ...
             if (Settings.FirstRunEver)
             {
                 Settings.FirstRunEver = false;
 
+                // display dialog informing user about authentication funcitonality
                 Device.BeginInvokeOnMainThread(async () =>
                 {
                     await DisplayAlert("Identity Check", "Please enter your username and password in order to use this app. If you do not have an account please click Register instead of Authenticate and we will handle it from there!", "OK");
@@ -31,11 +33,12 @@ namespace WorkingWithData.Pages
 
             if (isUserAuthenticated)
             {
+                // navigate to the application page
                 await App.NavigationMethod.PushAsync(new MainPage());
             }
             else
             {
-                // Also Update the Error Message Acordingly
+                // Also Update the Error Message Accordingly
                 await DisplayAlert("Authentication Failed", "Invalid Username or Password", "OK");
             }
         }
@@ -60,9 +63,9 @@ namespace WorkingWithData.Pages
                 // Now we can move forward to the Main Page
                 await DataAccessLayer.Database.Instance.AddAuthenticatedUser(currentUser);
             }
-            catch (Exception ex)
+            catch
             {
-                // We mai want to check that
+                // We may want to check that
                 await DisplayAlert("Error", "There was an error, please try again!", "OK");
             }
         }
