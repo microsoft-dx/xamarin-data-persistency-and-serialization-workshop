@@ -2,5 +2,7 @@
 <Paths>
   <ManifestDocuments />
   <NativeLibraries />
-  <Jars />
+  <Jars>
+    <Jar>obj\Release\81\lp\2\jl\formsviewgroup.jar</Jar>
+  </Jars>
 </Paths>

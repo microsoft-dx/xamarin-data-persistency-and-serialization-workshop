@@ -11,7 +11,7 @@ namespace DataTransferObjects.Users
         public bool IsMale { get; set; }
 
         public string UserName { get; set; }
-        public string AuthentiCationToken { get; set; }
+        public byte[] AuthenticationToken { get; set; }
 
         public User() { }
 
@@ -26,7 +26,7 @@ namespace DataTransferObjects.Users
             this.IsMale = deserializedUser.IsMale;
 
             this.UserName = deserializedUser.UserName;
-            this.AuthentiCationToken = deserializedUser.UserName;
+            this.AuthenticationToken = deserializedUser.AuthenticationToken;
         }
 
         public static string HashPassword(string plainTextPassword)
@@ -43,6 +43,13 @@ namespace DataTransferObjects.Users
             }
 
             return hash.ToString();
+        }
+
+        public static byte[] HashPasswordBytes(string plainTextPassword)
+        {
+            var crypt = new System.Security.Cryptography.SHA256Managed();
+
+            return crypt.ComputeHash(Encoding.UTF8.GetBytes(plainTextPassword));
         }
     }
 }

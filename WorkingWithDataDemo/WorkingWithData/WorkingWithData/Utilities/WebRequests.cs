@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Text;
@@ -8,7 +9,7 @@ namespace WorkingWithData.Utilities
 {
     public static class WebRequests
     {
-        private const string API_BASE_URL = "";
+        private const string API_BASE_URL = "http://localhost:44366/api";
 
         // Use this to Handle a Web Request
         public static async Task<string> GetAsync(string controller, Dictionary<string, string> parameters = null)
@@ -30,11 +31,18 @@ namespace WorkingWithData.Utilities
             request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
 
             // return request response
-            using (HttpWebResponse response = (HttpWebResponse)await request.GetResponseAsync())
-            using (Stream stream = response.GetResponseStream())
-            using (StreamReader reader = new StreamReader(stream))
+            try
             {
-                return await reader.ReadToEndAsync();
+                using (HttpWebResponse response = (HttpWebResponse)await request.GetResponseAsync())
+                using (Stream stream = response.GetResponseStream())
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    return await reader.ReadToEndAsync();
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
             }
         }
     }

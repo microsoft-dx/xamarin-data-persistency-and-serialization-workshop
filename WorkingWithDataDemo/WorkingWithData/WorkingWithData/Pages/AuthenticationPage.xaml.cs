@@ -48,11 +48,12 @@ namespace WorkingWithData.Pages
             try
             {
                 // First we send a request to the server to the Register Controller with our
-                // Desired username and hased passord
+                // Desired username and password
+                // We should move this in the register method of the authentication class
                 string serializedUser = await WebRequests.GetAsync("Register",
                     new System.Collections.Generic.Dictionary<string, string>{
                     { "username", userName.Text },
-                    { "password", User.HashPassword(passWord.Text) }
+                    { "password", passWord.Text }
                     });
                 // Now we need to deserialize the userdata
                 User currentUser = new User(serializedUser);
@@ -62,6 +63,9 @@ namespace WorkingWithData.Pages
 
                 // Now we can move forward to the Main Page
                 await DataAccessLayer.Database.Instance.AddAuthenticatedUser(currentUser);
+
+                // navigate to the application page
+                await App.NavigationMethod.PushAsync(new MainPage());
             }
             catch
             {

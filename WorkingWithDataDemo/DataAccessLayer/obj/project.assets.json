@@ -358,23 +358,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\alexandrupetrescu\\.nuget\\packages\\": {},
+    "C:\\Users\\Xander\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alexandrupetrescu\\source\\repos\\xamarin-data-persistency-and-serialization-workshop\\WorkingWithDataDemo\\DataAccessLayer\\DataAccessLayer.csproj",
+      "projectUniqueName": "S:\\GIT\\Repos\\MSP\\WorkingWithDataDemo\\DataAccessLayer\\DataAccessLayer.csproj",
       "projectName": "DataAccessLayer",
-      "projectPath": "C:\\Users\\alexandrupetrescu\\source\\repos\\xamarin-data-persistency-and-serialization-workshop\\WorkingWithDataDemo\\DataAccessLayer\\DataAccessLayer.csproj",
-      "packagesPath": "C:\\Users\\alexandrupetrescu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alexandrupetrescu\\source\\repos\\xamarin-data-persistency-and-serialization-workshop\\WorkingWithDataDemo\\DataAccessLayer\\obj\\",
+      "projectPath": "S:\\GIT\\Repos\\MSP\\WorkingWithDataDemo\\DataAccessLayer\\DataAccessLayer.csproj",
+      "packagesPath": "C:\\Users\\Xander\\.nuget\\packages\\",
+      "outputPath": "S:\\GIT\\Repos\\MSP\\WorkingWithDataDemo\\DataAccessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\alexandrupetrescu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Xander\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

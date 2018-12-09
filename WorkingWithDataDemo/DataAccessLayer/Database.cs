@@ -66,10 +66,10 @@ namespace DataAccessLayer
             return _connection.Table<User>().FirstOrDefaultAsync(x => x.UserID == userID);
         }
 
-        public Task<User> GetUserAsync(string userName, string authenticationToken)
+        public Task<User> GetUserAsync(string userName, byte[] authenticationToken)
         {
             return _connection.Table<User>().FirstOrDefaultAsync(
-                x => x.AuthentiCationToken == authenticationToken &&
+                x => x.AuthenticationToken == authenticationToken &&
                 x.UserName == userName);
         }
 
