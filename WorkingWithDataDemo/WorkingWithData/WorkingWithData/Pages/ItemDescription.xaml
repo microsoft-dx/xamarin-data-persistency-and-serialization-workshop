@@ -7,9 +7,10 @@
                      VerticalOptions="Center"
                      HorizontalOptions="Center">
             <Button Clicked="GoBack" Text="&lt;="/>
-            <Entry></Entry>
-            <Entry></Entry>
-            <Stepper></Stepper>
+            <Entry x:Name="ItemNameEntry" WidthRequest="350"></Entry>
+            <Entry x:Name="ItemDescriptionEntry" WidthRequest="350"></Entry>
+            <Label x:Name="ItemQty" ></Label>
+            <Stepper x:Name="ItemQtyStepper"></Stepper>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

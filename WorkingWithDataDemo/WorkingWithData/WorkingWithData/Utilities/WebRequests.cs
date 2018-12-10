@@ -9,7 +9,7 @@ namespace WorkingWithData.Utilities
 {
     public static class WebRequests
     {
-        private const string API_BASE_URL = "http://localhost:44366/api";
+        private const string API_BASE_URL = "https://transportbwebapi.azurewebsites.net/api";
 
         // Use this to Handle a Web Request
         public static async Task<string> GetAsync(string controller, Dictionary<string, string> parameters = null)

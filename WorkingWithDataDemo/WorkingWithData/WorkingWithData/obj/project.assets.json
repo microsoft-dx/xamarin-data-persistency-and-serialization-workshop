@@ -625,23 +625,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Xander\\.nuget\\packages\\": {},
+    "C:\\Users\\alexandrupetrescu\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "S:\\GIT\\Repos\\MSP\\WorkingWithDataDemo\\WorkingWithData\\WorkingWithData\\WorkingWithData.csproj",
+      "projectUniqueName": "C:\\Users\\alexandrupetrescu\\Source\\Repos\\xamarin-data-persistency-and-serialization-workshop\\WorkingWithDataDemo\\WorkingWithData\\WorkingWithData\\WorkingWithData.csproj",
       "projectName": "WorkingWithData",
-      "projectPath": "S:\\GIT\\Repos\\MSP\\WorkingWithDataDemo\\WorkingWithData\\WorkingWithData\\WorkingWithData.csproj",
-      "packagesPath": "C:\\Users\\Xander\\.nuget\\packages\\",
-      "outputPath": "S:\\GIT\\Repos\\MSP\\WorkingWithDataDemo\\WorkingWithData\\WorkingWithData\\obj\\",
+      "projectPath": "C:\\Users\\alexandrupetrescu\\Source\\Repos\\xamarin-data-persistency-and-serialization-workshop\\WorkingWithDataDemo\\WorkingWithData\\WorkingWithData\\WorkingWithData.csproj",
+      "packagesPath": "C:\\Users\\alexandrupetrescu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\alexandrupetrescu\\Source\\Repos\\xamarin-data-persistency-and-serialization-workshop\\WorkingWithDataDemo\\WorkingWithData\\WorkingWithData\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Xander\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\alexandrupetrescu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -654,8 +654,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "S:\\GIT\\Repos\\MSP\\WorkingWithDataDemo\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "S:\\GIT\\Repos\\MSP\\WorkingWithDataDemo\\DataAccessLayer\\DataAccessLayer.csproj"
+            "C:\\Users\\alexandrupetrescu\\Source\\Repos\\xamarin-data-persistency-and-serialization-workshop\\WorkingWithDataDemo\\DataAccessLayer\\DataAccessLayer.csproj": {
+              "projectPath": "C:\\Users\\alexandrupetrescu\\Source\\Repos\\xamarin-data-persistency-and-serialization-workshop\\WorkingWithDataDemo\\DataAccessLayer\\DataAccessLayer.csproj"
             }
           }
         }

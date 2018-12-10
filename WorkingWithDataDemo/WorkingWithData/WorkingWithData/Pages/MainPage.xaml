@@ -8,11 +8,11 @@
         <!--This is a layout which will contain action elements like buttons-->
         <StackLayout
             x:Name="actions"
-            Orientation="Horizontal"
             HorizontalOptions="Center">
             <Frame HeightRequest="50"></Frame>
             <Label Text="My Shopping List"></Label>
             <Button x:Name="AddNewItemButton" Text="Add New Item" Clicked="AddNewItem"/>
+            <Button x:Name="RefreshItemsButton" Text="Refresh" Clicked="RefreshItems"/>
         </StackLayout>
 
         <ScrollView>

@@ -1,5 +1,6 @@
 ﻿using DataTransferObjects.Users;
 using System;
+using System.Threading.Tasks;
 using WorkingWithData.Utilities;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -30,6 +31,10 @@ namespace WorkingWithData.Pages
         {
             // TO DO: Authenticate with the Server USING Requests
             bool isUserAuthenticated = false;
+            Settings.AuthenticatedUserID = Settings.INVALID_USER_ID;
+
+            await UseControllerToEnterApp("Authentication", userName.Text, User.HashPassword(passWord.Text));
+            isUserAuthenticated = Settings.AuthenticatedUserID != Settings.INVALID_USER_ID;
 
             if (isUserAuthenticated)
             {
@@ -43,17 +48,17 @@ namespace WorkingWithData.Pages
             }
         }
 
-        private async void RegisterMethod(object sender, EventArgs e)
+        private async Task UseControllerToEnterApp(string controllerName, string userName, string passWord)
         {
             try
             {
                 // First we send a request to the server to the Register Controller with our
                 // Desired username and password
                 // We should move this in the register method of the authentication class
-                string serializedUser = await WebRequests.GetAsync("Register",
+                string serializedUser = await WebRequests.GetAsync(controllerName,
                     new System.Collections.Generic.Dictionary<string, string>{
-                    { "username", userName.Text },
-                    { "password", passWord.Text }
+                    { "username", userName },
+                    { "password", passWord }
                     });
                 // Now we need to deserialize the userdata
                 User currentUser = new User(serializedUser);
@@ -67,11 +72,16 @@ namespace WorkingWithData.Pages
                 // navigate to the application page
                 await App.NavigationMethod.PushAsync(new MainPage());
             }
-            catch
-            {
+            catch (Exception ex) {
                 // We may want to check that
                 await DisplayAlert("Error", "There was an error, please try again!", "OK");
+
             }
+        }
+
+        private async void RegisterMethod(object sender, EventArgs e)
+        {
+            await UseControllerToEnterApp("Register", userName.Text, passWord.Text);
         }
     }
 }
