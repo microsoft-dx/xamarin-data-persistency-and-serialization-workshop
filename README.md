@@ -1,4 +1,5 @@
 
+
 # Data persistency and serialization in Xamarin.Forms
 
 ## Xamarin.Forms Local Databases
@@ -75,6 +76,8 @@ A simple example of writing data in JSON:
 For this, we will need to add one more NuGet package to our solution:
 ![image](https://user-images.githubusercontent.com/23138335/49687948-64ddad80-fb13-11e8-922b-d5de3c6520d7.png)
 
+We can cheat and use a Class Generator from JSON such as the one from [this link](http://json2csharp.com). This is a common thing to do when you are using APIs that are not your own.
+
  
 ### In the following lines I will explain how to make a WebRequest.
 The code can be accessed in the Utilities folder in our solution -> WebRequests.cs. Our version uses JSON elements to build new uris.
@@ -99,6 +102,3 @@ To send the request to the server and receive an answer call **GetResponse**. Th
 •	JSON gives us a human-readable collection of data that we can access in a really logical manner.
 
 •	When it comes to accessing on-line data, we must use Web Requests.
-
-
-
